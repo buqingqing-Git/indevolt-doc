@@ -17,9 +17,9 @@ description: Find answers to common questions and troubleshooting tips for INDEV
 
 ## How do I delete my account?
 
-Account deletion is irreversible. Please proceed with caution. For detailed steps, see [Account Deletion](./profile.md#13-delete-account).
+Account deletion is irreversible. Please proceed with caution. For detailed steps, see [Account Deletion](./profile.md#13-delete-account). 
 
-## What should I do if my device appears offline?
+## What should I do if my device appears offline? 
 
 1. Check that the device is powered on, the indicator lights are normal, and the Wi-Fi network it’s connected to is working properly.  
 2. On the Device page, long-press the device card and tap **WLAN** to reconfigure the network: see **[Network Setup](./add-device.md#step-3-configure-the-network)**.  
