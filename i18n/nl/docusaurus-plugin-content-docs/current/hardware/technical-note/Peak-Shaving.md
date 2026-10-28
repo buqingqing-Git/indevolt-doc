@@ -2,8 +2,11 @@
 title: Handleiding pieklastbegrenzing
 description: Leer hoe de batterij capaciteit reserveert en het netverbruik verlaagt tijdens piekuren, inclusief het capaciteitstarief‑voorbeeld voor Vlaanderen (België).
 ---
+<span id="indevolt-peak-shaving"></span>
+
 # Handleiding pieklastbegrenzing
 Leer hoe de batterij capaciteit reserveert en het netverbruik verlaagt tijdens piekuren.
+
 ---
 ## 1. Wat pieklastbegrenzing voor u kan doen
 Wanneer meerdere apparaten tegelijkertijd werken, kan het vermogen dat u van het net afneemt plotseling toenemen. Wanneer pieklastbegrenzing is ingeschakeld, levert de batterij bij geactiveerde voorwaarden extra vermogen, om het netafnamevermogen zo dicht mogelijk bij de ingestelde doelwaarde te houden.
@@ -20,6 +23,7 @@ Pieklastbegrenzing heeft hogere prioriteit dan de huidige bedrijfsmode zoals zel
 Zodra het energieniveau onder de pieklast‑SOC zakt, stoppen andere bedrijfsmodi met ontladen. Alleen pieklastbegrenzing blijft ontladen tot de back‑up‑SOC.
 
 SOC is het percentage resterende batterijcapaciteit. Een SOC van 30% betekent dat er ongeveer 30% van de batterij‑energie over is. De pieklast‑SOC is de drempel voor gereserveerde energie, geen bovengrens voor het verbruiksvermogen.
+
 ---
 ## 2. Invloed van gereserveerde energie op zelf‑verbruik
 De pieklast‑SOC is de drempel voor reservering, **niet** de startdrempel voor pieklastbegrenzing. De piekbegrenzing kan ook al boven deze waarde starten. De back‑up‑SOC is de ondergrens voor alle ontlaadhandelingen.
@@ -48,6 +52,7 @@ Vervolgens stijgt het verbruik, het netafnamevermogen bereikt 4,5 kW. De inges
 Na de reserveringsstatus wordt de oude modus niet direct hersteld zodra de SOC boven 30% komt. Er moet worden opgeladen tot **32% (30% + 2 procentpunten)**. Dit voorkomt herhaald schakelen door kleine schommelingen rond de drempelwaarde.
 
 > **Geen aparte reservering gewenst:** Stel de pieklast‑SOC gelijk aan de back‑up‑SOC. Dan is er geen extra gereserveerd bereik. Boven de back‑up‑SOC reageert het systeem nog steeds op piekverzoeken en voert piekafvlakking met voorrang uit. De waarde kan niet lager worden ingesteld dan de back‑up‑SOC. In de App is de back‑up‑reserve de minimale instelwaarde: stel beide gewoon op dezelfde waarde.
+
 ---
 ## 3. Wanneer start en stopt pieklastbegrenzing
 Voorbeeld‑instelling begrenzingsvermogen: 3600 W (3,6 kW). Dit is de standaardwaarde en kan worden aangepast. Het systeem observeert het **van het net afgenomen vermogen**, niet het totaalvermogen van alle huishoudelijke apparaten.
@@ -70,6 +75,7 @@ Indien de batterij zich nog in het reserveringsbereik bevindt, blijven andere on
 Pieklastbegrenzing **garandeert niet** dat de netafname nooit de ingestelde waarde overschrijdt. Voor het starten gelden tijdsvoorwaarden; het resultaat hangt ook af van batterijniveau, maximaal ontlaadvermogen en toestand van het apparaat. Zodra de batterij de back‑up‑SOC bereikt, stopt de piekregeling. Bij hoog blijvend verbruik kan het netafnamevermogen de ingestelde grens overschrijden.
 
 De trigger‑ en uitschakeltijden van het apparaat zijn bedrijfsregels voor de besturing. De meetperiodes van de energieleverancier zijn de factureringsregels. Deze twee mogen niet met elkaar worden verward: de 5‑seconden‑trigger van het apparaat is **niet** de factureringsmeetperiode.
+
 ---
 ## 4. Controleer eerst de slimme meter voor de instelling
 Zorg ervoor dat het apparaat verbonden is met een compatibele slimme meter en het netafnamevermogen kan uitlezen.
@@ -87,6 +93,7 @@ Links: Apparaatlijst. Rechts: Apparaatdetailpagina, tandwiel‑icoon staat recht
 
 <img src={require("./assets/nl_01.png").default} width="240"/>
 <img src={require("./assets/nl_02.png").default} width="240"/>
+
 ---
 ## 5. Vind en activeer pieklastbegrenzing
 ### Stap3: Open vermogeninstellingen
@@ -99,6 +106,7 @@ Links: Instellingspagina met *Vermogeninstellingen* en *Belastinginstellingen*. 
 
 <img src={require("./assets/nl_03.png").default} width="240"/>
 <img src={require("./assets/nl_04.png").default} width="240"/>
+
 ---
 ## 6. Stel de piekbegrenzingswaarde in
 ### Stap5: Stel het gewenste netafname‑begrenzingsvermogen in
@@ -111,6 +119,7 @@ Links: Hoofdpagina pieklastbegrenzing. Rechts: Pop‑up venster voor vermogenins
 
 <img src={require("./assets/nl_05.png").default} width="240"/>
 <img src={require("./assets/nl_06.png").default} width="240"/>
+
 ---
 ## 7. Stel planning en piekreserve in
 ### Stap6: Stel de planning in
@@ -131,6 +140,7 @@ Links: Pop‑up planning. Rechts: Pop‑up reserve voor pieklasten. Na opslaan g
 > Boven pieklast‑SOC: bij trigger wordt de actieve modus onderbroken voor piekafvlakking
 > Binnen reserveringsbereik: zonder piekverzoek ontladen andere modi niet, pieklastbegrenzing blijft werken tot back‑up‑SOC
 > Herstel oude modus pas na opladen tot *pieklast‑SOC + 2 procentpunten*.
+
 ---
 ## 8. Hoe Belgische gezinnen kosten besparen met piekafvlakking
 ### Geldig voor gezinnen in Vlaanderen met een digitale slimme meter
@@ -151,6 +161,7 @@ Bij een nominale batterijcapaciteit van 5 kWh komt het bereik 30%‑10% overee
 De besturingsdoelwaarde van 3,4 kW is niet gelijk aan de 15‑minuten‑meting van de energiemeter. Gezien de 5‑seconden‑trigger en vermogensschommelingen wordt er in dit voorbeeld van uitgegaan dat de daadwerkelijk gemeten maandpiek op 3,6 kW uitkomt, in plaats van direct 3,4 kW als factuurwaarde te gebruiken. Er wordt van uitgegaan dat er in de rest van de maand geen hogere pieken optreden.
 
 Wanneer er in de maand al een piek van 6,0 kW is opgetekend, wist het inschakelen van de functie deze oude waarde niet. De functie voorkomt alleen nieuwe hogere pieken en verlaagt de piekwaarden van latere maanden. Wanneer de batterij leeg raakt tijdens een piek, kan er opnieuw een hoge maandpiek ontstaan.
+
 ---
 ## 9. Berekening van de kostenbesparing voor het Belgische voorbeeld
 ### Gebruikt de officiële tarieven van Fluvius Antwerpen voor 2026 voor laagspanning met piekmeting.

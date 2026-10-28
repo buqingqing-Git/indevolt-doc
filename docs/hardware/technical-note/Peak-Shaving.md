@@ -3,6 +3,8 @@ title: Peak Shaving Guide
 description: Learn how Indevolt peak shaving reserves battery energy and reduces grid import power during demand peaks, including a Belgium (Flanders) capacity tariff example.
 ---
 
+<span id="indevolt-peak-shaving"></span>
+
 # Peak Shaving Guide
 
 Learn how the battery reserves energy and reduces grid import power at peak times.

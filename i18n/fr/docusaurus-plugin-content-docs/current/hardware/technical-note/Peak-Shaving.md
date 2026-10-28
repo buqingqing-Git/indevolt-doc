@@ -2,8 +2,11 @@
 title: Guide d’utilisation de la limitation des pics
 description: Comprendre comment la batterie réserve de l’énergie et réduit le prélèvement sur le réseau pendant les pics de consommation, exemple de redevance de capacité pour la Flandre belge.
 ---
+<span id="indevolt-peak-shaving"></span>
+
 # Guide d’utilisation de la limitation des pics
 Comprendre comment la batterie réserve de l’énergie et réduit le prélèvement sur le réseau pendant les pics de consommation.
+
 ---
 ## 1. Ce que la limitation des pics peut vous apporter
 Quand plusieurs appareils fonctionnent en même temps, la puissance prélevée sur le réseau peut augmenter brusquement. Lorsque la limitation des pics est activée, la batterie fournit de l’énergie complémentaire quand les conditions de déclenchement sont atteintes, afin de maintenir la puissance de prélèvement réseau aussi proche que possible de la valeur cible définie.
@@ -20,6 +23,7 @@ La limitation des pics a une priorité supérieure aux modes de fonctionnement c
 Lorsque le niveau d’énergie descend en dessous du SOC de réserve pour pics, les autres modes de décharge s’arrêtent. Seule la limitation des pics continue de décharger la batterie jusqu’au SOC de secours.
 
 Le SOC correspond au pourcentage d’énergie restante dans la batterie. Un SOC de 30 % signifie qu’il reste environ 30 % de la capacité de la batterie. Le SOC de réserve pour pics est un seuil de réserve d’énergie, **pas** une limite supérieure de puissance consommée.
+
 ---
 ## 2. Influence de la réserve d’énergie sur l’autoconsommation
 Le SOC de réserve pour pics est le seuil de mise en réserve, **pas** le seuil de démarrage de la limitation des pics. La limitation des pics peut démarrer même au‑dessus de cette valeur. Le SOC de secours est la limite basse pour tous les déchargements.
@@ -48,6 +52,7 @@ Puis la consommation augmente, le prélèvement réseau atteint 4,5 kW. La pui
 Après l’entrée en état de réserve, le mode initial ne reprend pas immédiatement quand le SOC dépasse 30 %. Il faut atteindre **32 % (30 % + 2 points de pourcentage)**. Cela évite des basculements fréquents dus à de petites fluctuations autour du seuil.
 
 > **Ne pas conserver de réserve supplémentaire :** Réglez le SOC réserve pour pics à la même valeur que le SOC de secours. Il n’y aura plus de plage de réserve dédiée. Au‑dessus du SOC de secours, le système répond toujours aux demandes de pic et réalise l’écrêtage en priorité. La valeur ne peut pas être inférieure à la réserve de secours. Dans l’application, la réserve de secours est la valeur minimale autorisée : mettez‑les simplement identiques.
+
 ---
 ## 3. Quand démarre et s’arrête la limitation des pics
 Exemple de réglage de puissance de limitation : 3600 W (3,6 kW). C’est la valeur par défaut, modifiable. Le système surveille la **puissance prélevée sur le réseau**, pas la somme des puissances de tous les appareils domestiques.
@@ -70,6 +75,7 @@ Si la batterie est toujours dans la plage de réserve, les autres modes de déch
 La limitation des pics **ne garantit pas** que le prélèvement réseau ne dépassera jamais la valeur réglée. Des conditions temporelles s’appliquent au déclenchement ; le résultat dépend aussi du niveau de charge de la batterie, de sa puissance maximale de décharge et de l’état de l’équipement. Quand la batterie atteint le SOC de secours, la limitation s’arrête. Si la consommation reste élevée, le prélèvement sur le réseau peut dépasser le seuil configuré.
 
 Les temps de déclenchement et d’arrêt de l’appareil sont des règles de pilotage technique. Les intervalles de mesure du gestionnaire de réseau sont les règles de facturation. Il ne faut pas les confondre : le déclenchement à 5 secondes de l’appareil **n’est pas** l’intervalle de mesure utilisé pour la facturation.
+
 ---
 ## 4. Vérifier le compteur intelligent avant configuration
 Vérifiez que l’équipement est connecté à un compteur intelligent compatible et qu’il peut lire la puissance de prélèvement réseau.
@@ -87,6 +93,7 @@ Gauche : Liste des appareils. Droite : Page détail appareil, icône engrena
 
 <img src={require("./assets/fr_01.png").default} width="240"/>
 <img src={require("./assets/fr_02.png").default} width="240"/>
+
 ---
 ## 5. Trouver et activer la limitation des pics
 ### Étape 3: Ouvrir les paramètres de puissance
@@ -99,6 +106,7 @@ Gauche : Page paramètres généraux avec *Paramètres de puissance* et *Param
 
 <img src={require("./assets/fr_03.png").default} width="240"/>
 <img src={require("./assets/fr_04.png").default} width="240"/>
+
 ---
 ## 6. Configurer la puissance d’écrêtage
 ### Étape 5: Régler la puissance de prélèvement réseau souhaitée
@@ -111,6 +119,7 @@ Gauche : Page principale limitation des pics. Droite : Fenêtre pop‑up ré
 
 <img src={require("./assets/fr_05.png").default} width="240"/>
 <img src={require("./assets/fr_06.png").default} width="240"/>
+
 ---
 ## 7. Régler programmation et réserve pour les pics
 ### Étape 6: Définir la programmation
@@ -131,6 +140,7 @@ Gauche : Fenêtre pop‑up programmation. Droite : Fenêtre pop‑up réserv
 > Au‑dessus du SOC réserve pour pics : quand les conditions de déclenchement sont remplies, le mode actif est suspendu pour l’écrêtage des pics
 > Dans la plage de réserve : sans demande de pic, les autres modes ne déchargent pas ; la limitation des pics fonctionne jusqu’au SOC de secours
 > Le mode initial n’est restauré qu’après recharge jusqu’à *SOC réserve pour pics + 2 points de pourcentage*.
+
 ---
 ## 8. Comment les foyers belges réduisent leurs frais avec l’écrêtage des pics
 ### Valable pour les foyers de Flandre équipés d’un compteur numérique intelligent
@@ -151,6 +161,7 @@ Pour une capacité nominale de batterie de 5 kWh, la plage 30 %‑10 % cor
 La valeur cible de régulation 3,4 kW n’est pas identique à la mesure sur 15 minutes du compteur du gestionnaire de réseau. Compte tenu du déclenchement à 5 secondes et des fluctuations de puissance, l’exemple retient un pic mensuel mesuré réel de 3,6 kW, au lieu d’utiliser directement 3,4 kW comme valeur de facturation. On suppose qu’aucun pic plus élevé n’apparaît sur le reste du mois.
 
 Si un pic de 6,0 kW a déjà été enregistré dans le mois, activer la fonction ne supprime pas cet historique. Elle évite seulement de nouveaux pics plus élevés et fait baisser les pics des mois suivants. Si la batterie se vide pendant un pic, un nouveau pic mensuel élevé peut apparaître.
+
 ---
 ## 9. Calcul des économies pour l’exemple belge
 ### Tarifs officiels Fluvius Anvers 2026 basse tension avec mesure de pic.

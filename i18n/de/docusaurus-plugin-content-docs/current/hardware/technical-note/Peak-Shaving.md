@@ -2,8 +2,11 @@
 title: Bedienungsanleitung Spitzenlastbegrenzung
 description: Erfahren Sie, wie die Batterie Energie reserviert und den Netzbezug bei Lastspitzen senkt, inklusive Kapazitätsgebühr‑Beispiel für Flandern (Belgien).
 ---
+<span id="indevolt-peak-shaving"></span>
+
 # Bedienungsanleitung Spitzenlastbegrenzung
 Erfahren Sie, wie die Batterie Energie reserviert und den Netzbezug bei Lastspitzen senkt.
+
 ---
 ## 1. Was die Spitzenlastbegrenzung für Sie leistet
 Wenn mehrere Geräte gleichzeitig laufen, kann die aus dem Netz bezogene Leistung plötzlich ansteigen. Bei aktivierter Spitzenlastbegrenzung liefert die Batterie bei Erreichen der Auslösebedingungen zusätzliche Leistung. Der Netzbezug soll möglichst nahe am eingestellten Zielwert gehalten werden.
@@ -20,6 +23,7 @@ Die Spitzenlastbegrenzung hat eine höhere Priorität als Betriebsmodi wie der E
 Sinkt der Ladezustand unter die Spitzenlast‑SOC, stellen alle anderen Entladestrategien ihre Arbeit ein. Nur die Spitzenlastbegrenzung entlädt weiter bis zur Notstrom‑SOC.
 
 SOC ist der prozentuale Restenergiegehalt der Batterie. Ein SOC von 30 % bedeutet, dass noch ca. 30 % der Batterieenergie vorhanden sind. Die Spitzenlast‑SOC ist die Schwelle für reservierte Energie, **keine** Obergrenze für die Verbrauchsleistung.
+
 ---
 ## 2. Einfluss der reservierten Energie auf den Eigenverbrauch
 Die Spitzenlast‑SOC ist die Reservierungsschwelle – **nicht** die Startschwelle der Spitzenlastbegrenzung. Die Spitzenlastregelung kann auch oberhalb dieses Wertes starten. Die Notstrom‑SOC ist die untere Grenze für alle Entladevorgänge.
@@ -48,6 +52,7 @@ Anschließend steigt der Verbrauch, der Netzbezug erreicht 4,5 kW. Die eingest
 Nach Eintritt in den Reservierungszustand wird der alte Modus nicht sofort bei Überschreiten von 30 % wieder aktiv. Die Aufladung muss bis **32 % (30 % + 2 Prozentpunkte)** erfolgen. Dadurch wird häufiges Hin‑ und Herschalten bei kleinen Schwankungen an der Schwelle vermieden.
 
 > **Keine zusätzliche Reservierung gewünscht:** Setzen Sie Spitzenlast‑SOC gleich der Notstrom‑SOC. Es entsteht kein zusätzlicher Reservierungsbereich. Oberhalb der Notstrom‑SOC reagiert das System trotzdem auf Spitzenanforderungen und führt die Spitzenkappung mit Vorrang aus. Der Wert kann nicht unter die Notstrom‑Reserve eingestellt werden. In der App ist die Notstrom‑Reserve der Minimalwert – setzen Sie beide Werte identisch.
+
 ---
 ## 3. Start‑ und Endbedingungen der Spitzenlastbegrenzung
 Beispiel‑Begrenzungsleistung: 3600 W (3,6 kW). Das ist der Standardwert und kann angepasst werden. Das System beobachtet die **aus dem Netz bezogene Leistung**, nicht die Summe aller Geräteleistungen im Haushalt.
@@ -70,6 +75,7 @@ Befindet sich die Batterie noch im Reservierungsbereich, bleiben andere Entlade�
 Die Spitzenlastbegrenzung **garantiert nicht**, dass der Netzbezug niemals den eingestellten Wert überschreitet. Für den Start gelten Zeitbedingungen; das Ergebnis hängt zudem von Batteriezustand, maximaler Entladeleistung und Gerätezustand ab. Erreicht die Batterie die Notstrom‑SOC, stoppt die Spitzenlastregelung. Bei anhaltend hohem Verbrauch kann der Netzbezug die Grenzwerte überschreiten.
 
 Die Auslöse‑ und Ausschaltzeiten des Gerätes sind betriebliche Steuerregeln. Die Messintervalle des Netzbetreibers sind die Abrechnungsregeln. Diese dürfen nicht verwechselt werden: die 5‑Sekunden‑Auslösung des Gerätes ist **nicht** die abrechnungsrelevante Messperiode.
+
 ---
 ## 4. Vor der Einstellung: Smart‑Meter prüfen
 Stellen Sie sicher, dass das Gerät mit einem kompatiblen Smart‑Meter verbunden ist und den Netzbezug auslesen kann.
@@ -87,6 +93,7 @@ Links: Geräteliste. Rechts: Gerätedetailseite, Zahnrad‑Symbol oben rechts. G
 
 <img src={require("./assets/de_01.png").default} width="240"/>
 <img src={require("./assets/de_02.png").default} width="240"/>
+
 ---
 ## 5. Spitzenlastbegrenzung finden und aktivieren
 ### Schritt 3: Leistungseinstellungen öffnen
@@ -99,6 +106,7 @@ Links: Einstellungsseite mit *Leistungseinstellungen* und *Lasteinstellungen*. R
 
 <img src={require("./assets/de_03.png").default} width="240"/>
 <img src={require("./assets/de_04.png").default} width="240"/>
+
 ---
 ## 6. Begrenzungs‑Leistung einstellen
 ### Schritt 5: Gewünschten Netzbezugs‑Grenzwert festlegen
@@ -111,6 +119,7 @@ Links: Hauptseite Spitzenlastbegrenzung. Rechts: Pop‑up‑Fenster Leistungsein
 
 <img src={require("./assets/de_05.png").default} width="240"/>
 <img src={require("./assets/de_06.png").default} width="240"/>
+
 ---
 ## 7. Zeitplan und Spitzenlast‑Reserve einstellen
 ### Schritt 6: Zeitplan festlegen
@@ -131,6 +140,7 @@ Links: Pop‑up‑Fenster Zeitplan. Rechts: Pop‑up‑Fenster Reserve für Spit
 > Oberhalb Spitzenlast‑SOC: Bei Auslösebedingung wird der aktive Modus für die Spitzenkappung unterbrochen
 > Innerhalb Reservierungsbereich: Ohne Spitzenanforderung entladen andere Modi nicht; Spitzenlastbegrenzung arbeitet bis Notstrom‑SOC
 > Der alte Betriebsmodus wird erst wiederhergestellt, wenn bis auf *Spitzenlast‑SOC + 2 Prozentpunkte* aufgeladen wurde.
+
 ---
 ## 8. So senken belgische Haushalte ihre Kosten durch Spitzenkappung
 ### Gilt für Haushalte in Flandern mit digitalem Smart‑Meter
@@ -151,6 +161,7 @@ Bei einer Nennkapazität von 5 kWh entspricht der Bereich 30 %‑10 % ca. 
 Der Regelzielwert von 3,4 kW ist nicht identisch mit der 15‑Minuten‑Messung des Netzbetreiber‑Zählers. Unter Berücksichtigung der 5‑Sekunden‑Auslösung und Leistungsschwankungen wird im Beispiel davon ausgegangen, dass der tatsächlich gemessene Monatspeak bei 3,6 kW liegt – statt 3,4 kW direkt als Abrechnungswert zu verwenden. Es wird angenommen, dass im Rest des Monats keine höheren Peaks auftreten.
 
 Wenn im Monat bereits ein Peak von 6,0 kW aufgezeichnet wurde, löscht das Einschalten der Funktion diesen alten Wert nicht. Die Funktion verhindert nur neue höhere Peaks und senkt die Peak‑Werte zukünftiger Monate. Wenn die Batterie während einer Spitze leer läuft, kann erneut ein hoher Monatspeak entstehen.
+
 ---
 ## 9. Kostenersparnis‑Berechnung für das belgische Beispiel
 ### Verwendet werden die offiziellen Tarife von Fluvius Antwerpen 2026 für Niederspannung mit Peak‑Messung.
