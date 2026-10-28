@@ -85,8 +85,8 @@ Tik op het tandwiel‑icoon rechtsboven op de apparaatdetailpagina.
 
 Links: Apparaatlijst. Rechts: Apparaatdetailpagina, tandwiel‑icoon staat rechtsboven. Apparaatnaam en getoonde waarden zijn slechts voorbeelden van de interface.
 
-<img src="./assets/nl_01.png" width="240"/>
-<img src="./assets/nl_02.png" width="240"/>
+<img src={require("./assets/nl_01.png").default} width="240"/>
+<img src={require("./assets/nl_02.png").default} width="240"/>
 ---
 ## 5. Vind en activeer pieklastbegrenzing
 ### Stap3: Open vermogeninstellingen
@@ -97,8 +97,8 @@ Tik binnen *Vermogeninstellingen* op **Pieklastbegrenzing**. De paginatitel word
 
 Links: Instellingspagina met *Vermogeninstellingen* en *Belastinginstellingen*. Rechts: Vermogeninstellingen‑pagina, tik op *Pieklastbegrenzing* om te openen.
 
-<img src="./assets/nl_03.png" width="240"/>
-<img src="./assets/nl_04.png" width="240"/>
+<img src={require("./assets/nl_03.png").default} width="240"/>
+<img src={require("./assets/nl_04.png").default} width="240"/>
 ---
 ## 6. Stel de piekbegrenzingswaarde in
 ### Stap5: Stel het gewenste netafname‑begrenzingsvermogen in
@@ -109,8 +109,8 @@ Pas de waarde aan op basis van uw historische piekwaarden, belastingprofiel en b
 
 Links: Hoofdpagina pieklastbegrenzing. Rechts: Pop‑up venster voor vermogeninstelling, pas aan en klik onderaan op *Bewaar*. De gele bovenste waarschuwing betekent dat nog geen slimme meter geselecteerd is. Ingeschakelde schakelaar betekent **niet** automatisch dat de functie werkt.
 
-<img src="./assets/nl_05.png" width="240"/>
-<img src="./assets/nl_06.png" width="240"/>
+<img src={require("./assets/nl_05.png").default} width="240"/>
+<img src={require("./assets/nl_06.png").default} width="240"/>
 ---
 ## 7. Stel planning en piekreserve in
 ### Stap6: Stel de planning in
@@ -124,8 +124,8 @@ Wanneer u geen extra reservering wenst: stel deze waarde gelijk aan de back‑up
 
 Links: Pop‑up planning. Rechts: Pop‑up reserve voor pieklasten. Na opslaan ga terug naar hoofdpagina, controleer schakelaar‑status, begrenzingsvermogen, planning, piekreserve en of de slimme‑meter‑waarschuwing verdwenen is.
 
-<img src="./assets/nl_07.png" width="240"/>
-<img src="./assets/nl_08.png" width="240"/>
+<img src={require("./assets/nl_07.png").default} width="240"/>
+<img src={require("./assets/nl_08.png").default} width="240"/>
 
 > **Validatie‑methode:**
 > Boven pieklast‑SOC: bij trigger wordt de actieve modus onderbroken voor piekafvlakking

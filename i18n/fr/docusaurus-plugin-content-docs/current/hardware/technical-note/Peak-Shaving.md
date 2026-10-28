@@ -85,8 +85,8 @@ Appuyez sur l’icône engrenage située en haut à droite de la page détail ap
 
 Gauche : Liste des appareils. Droite : Page détail appareil, icône engrenage en haut à droite. Nom de l’appareil et valeurs affichées sont uniquement des exemples d’interface.
 
-<img src="./assets/fr_01.png" width="240"/>
-<img src="./assets/fr_02.png" width="240"/>
+<img src={require("./assets/fr_01.png").default} width="240"/>
+<img src={require("./assets/fr_02.png").default} width="240"/>
 ---
 ## 5. Trouver et activer la limitation des pics
 ### Étape 3: Ouvrir les paramètres de puissance
@@ -97,8 +97,8 @@ Dans *Paramètres de puissance*, appuyez sur **Limitation des pics**. Le titre d
 
 Gauche : Page paramètres généraux avec *Paramètres de puissance* et *Paramètres de consommation*. Droite : Page paramètres de puissance, appuyez sur *Limitation des pics* pour ouvrir.
 
-<img src="./assets/fr_03.png" width="240"/>
-<img src="./assets/fr_04.png" width="240"/>
+<img src={require("./assets/fr_03.png").default} width="240"/>
+<img src={require("./assets/fr_04.png").default} width="240"/>
 ---
 ## 6. Configurer la puissance d’écrêtage
 ### Étape 5: Régler la puissance de prélèvement réseau souhaitée
@@ -109,8 +109,8 @@ Adaptez cette valeur à vos pics historiques, votre profil de charge et les capa
 
 Gauche : Page principale limitation des pics. Droite : Fenêtre pop‑up réglage puissance, ajuster puis enregistrer en bas. Le bandeau jaune en haut indique qu’aucun compteur intelligent n’est sélectionné. Un interrupteur activé ne signifie **pas** que la fonction est opérationnelle.
 
-<img src="./assets/fr_05.png" width="240"/>
-<img src="./assets/fr_06.png" width="240"/>
+<img src={require("./assets/fr_05.png").default} width="240"/>
+<img src={require("./assets/fr_06.png").default} width="240"/>
 ---
 ## 7. Régler programmation et réserve pour les pics
 ### Étape 6: Définir la programmation
@@ -124,8 +124,8 @@ Si vous ne voulez pas de réserve supplémentaire : réglez ce paramètre iden
 
 Gauche : Fenêtre pop‑up programmation. Droite : Fenêtre pop‑up réserve pour les pics. Après enregistrement revenez sur la page principale, vérifiez : état de l’interrupteur, puissance de limitation, programmation, réserve pour pics et que l’avertissement sur compteur intelligent a disparu.
 
-<img src="./assets/fr_07.png" width="240"/>
-<img src="./assets/fr_08.png" width="240"/>
+<img src={require("./assets/fr_07.png").default} width="240"/>
+<img src={require("./assets/fr_08.png").default} width="240"/>
 
 > **Méthode de validation :**
 > Au‑dessus du SOC réserve pour pics : quand les conditions de déclenchement sont remplies, le mode actif est suspendu pour l’écrêtage des pics
@@ -156,4 +156,23 @@ Si un pic de 6,0 kW a déjà été enregistré dans le mois, activer la foncti
 ### Tarifs officiels Fluvius Anvers 2026 basse tension avec mesure de pic.
 La redevance de capacité sur le pic mensuel moyen est de **49,4036563 EUR/kW/an (hors TVA)**. L’exemple utilise 49,40 EUR/kW/an. Ce tarif ne s’applique qu’à cette région et cette année ; pour d’autres régions reportez‑vous à votre facture ou aux documents tarifaires officiels.
 
-Hypothèse : les pics mensuels historiques et toute la période de règlement sont stabilisés aux niveaux respectifs. Les pics facturés sont respectivement 6,0 kW et 3,6 kW. Le premier mois après activation
+Hypothèse : les pics mensuels historiques et toute la période de règlement sont stabilisés aux niveaux respectifs. Les pics facturés sont respectivement 6,0 kW et 3,6 kW. Le premier mois après activation ne produit pas encore un effet d année complète.
+
+| Comparaison | Sans limitation des pics | Avec limitation des pics |
+|---|---|---|
+| Pic facturé stabilisé | 6,0 kW | 3,6 kW |
+| Redevance de capacité annualisée (hors TVA) | 6,0 × 49,40 = 296,40 EUR | 3,6 × 49,40 = 177,84 EUR |
+| Différence de redevance de capacité (hors TVA) | — | environ **118,56 EUR par an** |
+
+Dans ces conditions stabilisées, la différence annualisée pour la redevance de capacité est d environ 119 EUR. Ce n est pas une économie immédiatement encaissée, ni la totalité de la facture d électricité. Le bénéfice net réel dépend des pertes de charge/décharge de la batterie, de la source de l énergie chargée, des prix de l électricité et de l usure de la batterie.
+
+### Comment vérifier l efficacité de vos réglages
+Consultez dans *Mijn Fluvius* les valeurs de prélèvement sur 15 minutes et les pics mensuels pour vérifier si le maximum du mois a diminué. Les valeurs de puissance instantanée dans l App ne servent qu à observer le processus de régulation ; la facturation repose sur les données du compteur et de la facture.
+
+Exemple : si les pics des 11 derniers mois étaient tous à 6,0 kW et que seul le dernier mois est passé à 3,6 kW, le pic mensuel moyen sur ces 12 mois est de 5,8 kW, et non 3,6 kW. Au fur et à mesure que les mois à pic bas remplacent les anciens pics élevés, l effet sur la facture apparaît progressivement ; le montant exact dépend du règlement de votre fournisseur.
+
+### Sources et date de vérification
+Date de vérification : 22 octobre 2026. Les règles tarifaires suivent les dernières annonces officielles et votre contrat.
+- Calcul et explication de la redevance de capacité Fluvius : https://www.fluvius.be/nl/factuur-en-tarieven/capaciteitstarief/gezinnen-en-kleine-ondernemingen/op-mijn-factuur
+- FAQ redevance de capacité Fluvius et seuil minimal : https://www.fluvius.be/nl/veelgestelde-vragen/capaciteitstarief-gezinnen-kleine-ondernemingen
+- Tableau des tarifs officiels 2026 Antwerp de la Vlaamse Nutsregulator : https://assets.vlaamsenutsregulator.be/2025-11/FA%20-%202026%20-%20ELEK.pdf

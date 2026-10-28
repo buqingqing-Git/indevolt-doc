@@ -85,8 +85,8 @@ Tippen Sie auf das Zahnrad‑Symbol oben rechts auf der Gerätedetailseite.
 
 Links: Geräteliste. Rechts: Gerätedetailseite, Zahnrad‑Symbol oben rechts. Gerätenamen und angezeigte Werte sind nur Beispiele der Benutzeroberfläche.
 
-<img src="./assets/de_01.png" width="240"/>
-<img src="./assets/de_02.png" width="240"/>
+<img src={require("./assets/de_01.png").default} width="240"/>
+<img src={require("./assets/de_02.png").default} width="240"/>
 ---
 ## 5. Spitzenlastbegrenzung finden und aktivieren
 ### Schritt 3: Leistungseinstellungen öffnen
@@ -97,8 +97,8 @@ Tippen Sie innerhalb der *Leistungseinstellungen* auf **Spitzenlastbegrenzung**.
 
 Links: Einstellungsseite mit *Leistungseinstellungen* und *Lasteinstellungen*. Rechts: Leistungseinstellungen‑Seite, tippen Sie auf *Spitzenlastbegrenzung* zum Öffnen.
 
-<img src="./assets/de_03.png" width="240"/>
-<img src="./assets/de_04.png" width="240"/>
+<img src={require("./assets/de_03.png").default} width="240"/>
+<img src={require("./assets/de_04.png").default} width="240"/>
 ---
 ## 6. Begrenzungs‑Leistung einstellen
 ### Schritt 5: Gewünschten Netzbezugs‑Grenzwert festlegen
@@ -109,8 +109,8 @@ Passen Sie den Wert an Ihre historischen Lastspitzen, Lastprofil und Batterielei
 
 Links: Hauptseite Spitzenlastbegrenzung. Rechts: Pop‑up‑Fenster Leistungseinstellung, anpassen und unten speichern. Der gelbe Warnhinweis oben bedeutet: es ist noch kein Smart‑Meter ausgewählt. Ein aktivierter Schalter bedeutet **nicht**, dass die Funktion bereits wirksam ist.
 
-<img src="./assets/de_05.png" width="240"/>
-<img src="./assets/de_06.png" width="240"/>
+<img src={require("./assets/de_05.png").default} width="240"/>
+<img src={require("./assets/de_06.png").default} width="240"/>
 ---
 ## 7. Zeitplan und Spitzenlast‑Reserve einstellen
 ### Schritt 6: Zeitplan festlegen
@@ -124,8 +124,8 @@ Wenn Sie keine zusätzliche Reservierung wollen: setzen Sie diesen Wert gleich d
 
 Links: Pop‑up‑Fenster Zeitplan. Rechts: Pop‑up‑Fenster Reserve für Spitzenlasten. Nach dem Speichern kehren Sie zur Hauptseite zurück und prüfen: Schalter‑Status, Begrenzungsleistung, Zeitplan, Spitzenreserve und ob die Smart‑Meter‑Warnung weg ist.
 
-<img src="./assets/de_07.png" width="240"/>
-<img src="./assets/de_08.png" width="240"/>
+<img src={require("./assets/de_07.png").default} width="240"/>
+<img src={require("./assets/de_08.png").default} width="240"/>
 
 > **Prüfverfahren:**
 > Oberhalb Spitzenlast‑SOC: Bei Auslösebedingung wird der aktive Modus für die Spitzenkappung unterbrochen
