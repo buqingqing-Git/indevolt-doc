@@ -57,7 +57,7 @@ Beispiel‑Begrenzungsleistung: 3600 W (3,6 kW). Das ist der Standardwert un
 | Start | Netzbezug ≥3600 W für mindestens 5 Sekunden, Batterie‑SOC > Notstrom‑SOC → Batterie beginnt mit Spitzenlastbegrenzung |
 | Regelziel | Die Batterie liefert Zusatzleistung, um den Netzbezug auf 3400 W zu senken (eingestellter Wert minus 200 W) |
 | Weiterlaufende Regelung | Sinkt der Netzbezug nach dem Start unter 3600 W, stoppt die Regelung nicht sofort. Bei Werten zwischen 3100‑3600 W bleibt die Regelung aktiv. |
-| Beenden | Regelung endet, wenn Netzbezug <3100 W für 30 Sekunden **oder** Netzbezug <400 W. Bei <400 W entfällt die 30‑Sekunden‑Wartezeit. |
+| Beenden | Regelung endet, wenn Netzbezug &lt;3100 W für 30 Sekunden **oder** Netzbezug &lt;400 W. Bei &lt;400 W entfällt die 30‑Sekunden‑Wartezeit. |
 
 ### Unterschiedliche Schwellen für Start und Ende
 Wenn die Regelung sofort bei Überschreiten von 3600 W startet und sofort bei Unterschreiten stoppt, verursachen kleine Leistungsschwankungen ständiges Umschalten. Unterschiedliche Schwellen sorgen für stabilen Betrieb.

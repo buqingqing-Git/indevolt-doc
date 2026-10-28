@@ -395,3 +395,212 @@ div[class^="announcementBar_"] {
   background: var(--ifm-color-primary);
   color: white;
 }
+
+/* =====================================================
+   Colored Admonitions · 彩色提示框
+   ===================================================== */
+:root {
+  --adm-note-bg: #f0f6ff;
+  --adm-note-bd: #4d8df0;
+  --adm-note-fg: #1d4ed8;
+
+  --adm-info-bg: #e8fbff;
+  --adm-info-bd: #12c2e0;
+  --adm-info-fg: #0e7490;
+
+  --adm-tip-bg: #eafaf1;
+  --adm-tip-bd: #24c95f;
+  --adm-tip-fg: #15803d;
+
+  --adm-warning-bg: #fff8e6;
+  --adm-warning-bd: #f0a02c;
+  --adm-warning-fg: #b45309;
+
+  --adm-danger-bg: #fff0ee;
+  --adm-danger-bd: #ef5b57;
+  --adm-danger-fg: #b91c1c;
+
+  --adm-caution-bg: #fef3c7;
+  --adm-caution-bd: #eab308;
+  --adm-caution-fg: #a16207;
+}
+
+html[data-theme="dark"] {
+  --adm-note-bg: #16233d;
+  --adm-note-fg: #93c5fd;
+
+  --adm-info-bg: #0b2730;
+  --adm-info-fg: #7dd3fc;
+
+  --adm-tip-bg: #0d2a20;
+  --adm-tip-fg: #86efac;
+
+  --adm-warning-bg: #2b2310;
+  --adm-warning-fg: #fcd34d;
+
+  --adm-danger-bg: #2d1618;
+  --adm-danger-fg: #fca5a5;
+
+  --adm-caution-bg: #2b2310;
+  --adm-caution-fg: #fde047;
+}
+
+/* 容器：圆角、加粗左侧色条、柔和底色、轻阴影 */
+article .markdown .theme-admonition,
+.theme-admonition {
+  position: relative;
+  border: 1px solid rgba(127, 127, 127, 0.14);
+  border-left-width: 4px;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+  color: var(--ifm-text-color);
+}
+
+/* 标题行（图标 + 标题）：加粗、跟随类型色 */
+.theme-admonition > :first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0 0 0.4rem;
+  font-size: 0.98rem;
+}
+.theme-admonition > :first-child svg {
+  width: 1.05em;
+  height: 1.05em;
+  flex: 0 0 auto;
+}
+
+/* 正文间距 */
+.theme-admonition p {
+  margin: 0.2rem 0 0.5rem;
+}
+.theme-admonition p:last-child {
+  margin-bottom: 0;
+}
+.theme-admonition ul,
+.theme-admonition ol {
+  margin-bottom: 0.4rem;
+}
+
+/* —— 各类型配色 —— */
+.theme-admonition-note {
+  background: var(--adm-note-bg);
+  border-left-color: var(--adm-note-bd);
+}
+.theme-admonition-note > :first-child {
+  color: var(--adm-note-fg);
+}
+
+.theme-admonition-info {
+  background: var(--adm-info-bg);
+  border-left-color: var(--adm-info-bd);
+}
+.theme-admonition-info > :first-child {
+  color: var(--adm-info-fg);
+}
+
+.theme-admonition-tip {
+  background: var(--adm-tip-bg);
+  border-left-color: var(--adm-tip-bd);
+}
+.theme-admonition-tip > :first-child {
+  color: var(--adm-tip-fg);
+}
+
+.theme-admonition-warning {
+  background: var(--adm-warning-bg);
+  border-left-color: var(--adm-warning-bd);
+}
+.theme-admonition-warning > :first-child {
+  color: var(--adm-warning-fg);
+}
+
+.theme-admonition-danger {
+  background: var(--adm-danger-bg);
+  border-left-color: var(--adm-danger-bd);
+}
+.theme-admonition-danger > :first-child {
+  color: var(--adm-danger-fg);
+}
+
+.theme-admonition-caution {
+  background: var(--adm-caution-bg);
+  border-left-color: var(--adm-caution-bd);
+}
+.theme-admonition-caution > :first-child {
+  color: var(--adm-caution-fg);
+}
+
+/* 提示框内行内代码与链接：半透明底色，避免与全局灰色冲突 */
+.theme-admonition code {
+  background: rgba(127, 127, 127, 0.12);
+  border-color: transparent;
+}
+.theme-admonition a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+html[data-theme="dark"] .theme-admonition a {
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+}
+
+/* =====================================================
+   Layout polish · 排版优化
+   ===================================================== */
+/* 表格：圆角、表头高亮、行悬停 */
+article .markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+article .markdown table th,
+article .markdown table td {
+  border: none;
+  border-right: 1px solid var(--ifm-border-color);
+  border-bottom: 1px solid var(--ifm-border-color);
+}
+article .markdown table th:last-child,
+article .markdown table td:last-child {
+  border-right: none;
+}
+article .markdown table tbody tr:last-child td {
+  border-bottom: none;
+}
+article .markdown table thead th {
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-heading-color);
+  font-weight: 600;
+}
+article .markdown table tbody tr {
+  transition: background 0.15s ease;
+}
+article .markdown table tbody tr:hover {
+  background: rgba(18, 175, 250, 0.05);
+}
+html[data-theme="dark"] article .markdown table tbody tr:hover {
+  background: rgba(18, 175, 250, 0.12);
+}
+html[data-theme="dark"] article .markdown table thead th {
+  background: #23262b;
+}
+
+/* 引用块：圆角 + 左侧色条 */
+article .markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary-light);
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 6px;
+  padding: 0.6rem 1.1rem;
+  margin: 1rem 0;
+  color: var(--ifm-secondary-text-color);
+}

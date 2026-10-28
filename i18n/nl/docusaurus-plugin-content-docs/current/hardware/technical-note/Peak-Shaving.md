@@ -57,7 +57,7 @@ Voorbeeld‑instelling begrenzingsvermogen: 3600 W (3,6 kW). Dit is de stand
 | Start | Netafnamevermogen ≥3600 W gedurende minimaal 5 seconden, batterij‑SOC > back‑up‑SOC → batterij start met pieklastbegrenzing |
 | Streefwaarde | De batterij levert extra vermogen om het netafnamevermogen te verlagen naar 3400 W (ingestelde waarde min 200 W) |
 | Doorlopende regeling | Wanneer het netafnamevermogen na start onder 3600 W komt, stopt de regeling niet direct. Bij vermogen tussen 3100‑3600 W blijft de regeling actief. |
-| Uitschakelen | Regeling wordt beëindigd wanneer netafnamevermogen <3100 W gedurende 30 seconden **of** netafnamevermogen <400 W. Bij <400 W geldt geen wachttijd van 30 seconden. |
+| Uitschakelen | Regeling wordt beëindigd wanneer netafnamevermogen &lt;3100 W gedurende 30 seconden **of** netafnamevermogen &lt;400 W. Bij &lt;400 W geldt geen wachttijd van 30 seconden. |
 
 ### Verschillende drempels voor start en einde
 Als de regeling onmiddellijk start boven 3600 W en direct stopt onder 3600 W, veroorzaken kleine vermogensschommelingen constant schakelen. Verschillende drempels zorgen voor stabielere werking.

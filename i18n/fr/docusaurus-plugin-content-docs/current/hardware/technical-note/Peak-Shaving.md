@@ -57,7 +57,7 @@ Exemple de réglage de puissance de limitation : 3600 W (3,6 kW). C’est 
 | Démarrage | Prélèvement réseau ≥3600 W pendant au moins 5 secondes, SOC batterie > SOC secours → la batterie commence la limitation des pics |
 | Objectif de régulation | La batterie fournit de la puissance complémentaire pour ramener le prélèvement réseau à 3400 W (valeur réglée moins 200 W) |
 | Régulation continue | Si le prélèvement réseau descend en dessous de 3600 W après le démarrage, la régulation ne s’arrête pas immédiatement. Elle reste active entre 3100 W et 3600 W. |
-| Fin de régulation | La limitation s’arrête si prélèvement réseau <3100 W pendant 30 secondes **ou** prélèvement réseau <400 W. Si <400 W, le délai de 30 secondes ne s’applique pas. |
+| Fin de régulation | La limitation s’arrête si prélèvement réseau &lt;3100 W pendant 30 secondes **ou** prélèvement réseau &lt;400 W. Si &lt;400 W, le délai de 30 secondes ne s’applique pas. |
 
 ### Seuils différents pour démarrage et arrêt
 Si la fonction démarre aussitôt au‑dessus de 3600 W et s’arrête aussitôt en dessous, de petites variations de puissance provoquent des basculements répétés. Des seuils distincts assurent un fonctionnement plus stable.
